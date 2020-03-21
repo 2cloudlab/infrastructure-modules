@@ -25,8 +25,8 @@ resource "aws_organizations_organization" "org" {
 }
 
 resource "aws_organizations_account" "child_accounts" {
-  for_each = var.child_accounts
-  name     = each.key
-  email    = each.value
-  role_name     = var.organizations_account_access_role_name
+  for_each  = var.child_accounts
+  name      = each.key
+  email     = each.value
+  role_name = var.organizations_account_access_role_name
 }

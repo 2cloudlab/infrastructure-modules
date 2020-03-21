@@ -1,7 +1,7 @@
 output "child_accounts" {
   value = {
-    for key, value in aws_organizations_account.child_accounts:
-    key => { id: value.id, arn: value.arn }
+    for key, value in aws_organizations_account.child_accounts :
+    key => { id : value.id, arn : value.arn }
   }
 }
 
